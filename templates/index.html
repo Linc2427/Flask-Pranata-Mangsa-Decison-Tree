@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Upload File</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        th,
+        td {
+            border: 1px solid black;
+            padding: 8px;
+            text-align: left;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>Upload CSV File</h2>
+    <form method="post" enctype="multipart/form-data">
+        <input type="file" name="file">
+        <input type="submit" value="Upload">
+    </form>
+
+    <h2>Keterangan</h2>
+    <div class="table">
+        <table border=1>
+            <tr>
+                <td>Bulan</td>
+                <td>Nama Bulan</td>
+                <td>Keterangan</td>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>Kasa</td>
+                <td>Ini Keterangan</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Karo</td>
+                <td>Ini Keterangan</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>Katelu</td>
+                <td>Ini Keterangan</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>Kapat</td>
+                <td>Ini Keterangan</td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td>Kalima</td>
+                <td>Ini Keterangan</td>
+            </tr>
+            <tr>
+                <td>6</td>
+                <td>Kanem</td>
+                <td>Ini Keterangan</td>
+            </tr>
+            <tr>
+                <td>7</td>
+                <td>Kapitu</td>
+                <td>Ini Keterangan</td>
+            </tr>
+            <tr>
+                <td>8</td>
+                <td>Kawolu</td>
+                <td>Ini Keterangan</td>
+            </tr>
+            <tr>
+                <td>9</td>
+                <td>Kasanga</td>
+                <td>Ini Keterangan</td>
+            </tr>
+            <tr>
+                <td>10</td>
+                <td>Kasepuluh</td>
+                <td>Ini Keterangan</td>
+            </tr>
+            <tr>
+                <td>11</td>
+                <td>Dhesta</td>
+                <td>Ini Keterangan</td>
+            </tr>
+            <tr>
+                <td>12</td>
+                <td>Sadha</td>
+                <td>Ini Keterangan</td>
+            </tr>
+        </table>
+        <br>
+        <h2 align="center"> Hasil prediksi</h2>
+        <!-- Display tables if they exist -->
+        {% if tables %}
+        {% for table in tables %}
+        {{ table|safe }}
+        {% endfor %}
+        <br>
+        <a href="/download" class="button">Download Predictions</a>
+        {% endif %}
+</body>
+
+</html>
